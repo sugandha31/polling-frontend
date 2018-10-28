@@ -1,0 +1,35 @@
+<div class="container">
+      <h1>CREATE POLL</h1>
+    <br>
+    <div class="container">
+      <form >
+        <div class="form-group row">
+          <div class="col-lg-12">
+              <label for="usr">QUESTION:</label>
+              <input type="text" class="form-control" id="question" name="QUESTION" #question>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-lg-4">
+              <label for="pwd">OPTIONS:</label>
+              <input type="text" class="form-control" id="option" name="OPTION" #option1><br>
+              <input type="text" class="form-control" id="option" name="OPTION" #option2>
+              <li *ngFor="let i in count">
+                <input type="text" class="form-control" id="option" name="OPTION" #option3>
+              </li>
+          </div>
+        </div><br>
+        <div>
+          <button type="submit" class="btn btn-primary" (click)="addOption">Add Another Option</button>  
+        </div>
+        <br><br>
+     <div class="form-check">
+          <label class="form-check-label" for="check1">
+            <input type="checkbox" class="form-check-input" id="check1" name="DO YOU WANT TO VOTE ANONYMOUSLY...??" value="something" checked>DO YOU WANT TO VOTE ANONYMOUSLY...??
+          </label>
+        </div>
+    <br><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    
