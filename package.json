@@ -22,11 +22,16 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@ng-bootstrap/ng-bootstrap": "^2.0.0",
+    "@ngx-pwa/local-storage": "^6.1.1",
+    "angular-web-storage": "^3.0.0",
+    "angular-webstorage-service": "^1.0.2",
     "bootstrap": "^4.0.0-beta",
     "chart.js": "^2.7.2",
     "core-js": "^2.4.1",
     "ngx-bootstrap": "^3.0.1",
+    "ngx-store": "^2.0.0",
     "rxjs": "^5.5.6",
+    "uninstall": "0.0.0",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
