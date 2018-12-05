@@ -21,25 +21,16 @@ export class AppComponent {
   faq : any;
   contact : any;
   show : boolean;
-  Question: String[] = [];
+  //Question: String[] = [];
 
   ngOnInit(){
     if(this.storage.get('show')==true){
       this.show = false;
-      this.getAll();
+      //this.getAll();
     }else{
       this.show = true;
-      this.getAll();
+     // this.getAll();
     }
-  }
-
-  getAll(){
-    this.service.getAllPolls().subscribe((result: any)=>{
-      result.data.forEach(element => {
-        this.Question.push(element['poll']);
-      });
-      console.log(this.Question);
-    })
   }
 
   pgReload(){
@@ -73,12 +64,9 @@ export class AppComponent {
           'email': email,
           'password': password
         });
-        console.log(this.storage.get('show'));
-        console.log(this.storage.get('user'));
         this.show = false;
       }else{
         this.storage.set('show', false );
-        console.log(this.storage.get('show'));
         this.show = true;
       }
     })
@@ -86,7 +74,6 @@ export class AppComponent {
 
   signup(name: String, user_name: String, email: String, password: String){
     this.service.signup(email, name, user_name, password).subscribe((result: any)=>{
-      console.log(result);
       alert("You are successfully SignedUp. Login to proceed.");
     })
   }
@@ -95,7 +82,6 @@ export class AppComponent {
     this.service.logout(email).subscribe((result:any)=>{
       if(result.status == true){
         this.storage.set('show', false );
-        console.log(this.storage.get('show'));
         alert('You are successfully logged out.');
         this.show = true;
       }

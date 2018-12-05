@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataShareService } from '../data-share.service';
 @Component({
   selector: 'bc-question',
   templateUrl: './question.component.html',
@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
 
-  constructor() { }
+  id : any
+
+  constructor(private data: DataShareService) { }
 
   ngOnInit() {
-    
+    this.data.currentId.subscribe(result => this.id = result)
   }
-
 }

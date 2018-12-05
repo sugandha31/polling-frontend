@@ -1,0 +1,9 @@
+<router-outlet></router-outlet>
+<div class="container-fluid">
+    <div>
+      <ul *ngFor = "let i of Question">
+        <a routerLink="/question" (click)="OnClick(i)" ><li>{{i}}</li></a>
+      </ul>
+    </div>
+  <hr>
+  </div>

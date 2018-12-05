@@ -6,6 +6,8 @@ import { AppComponent } from '../app.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { CreatePollComponent } from '../create-poll/create-poll.component';
 import { QuestionComponent } from '../question/question.component';
+import { ListComponent } from '../list/list.component';
+import { LivePollComponent } from '../live-poll/live-poll.component';
 
 const appRoutes: Routes = [
   {
@@ -19,6 +21,14 @@ const appRoutes: Routes = [
   {
     path : 'question',
     component : QuestionComponent
+  },
+  {
+    path : 'dashboard',
+    component : ListComponent
+  },
+  {
+    path : 'livepoll',
+    component : LivePollComponent
   }
 ];
 

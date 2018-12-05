@@ -14,6 +14,9 @@ import { NodeService } from './node.service';
 import { CreatePollComponent } from './create-poll/create-poll.component';
 import { StorageService, StorageServiceModule } from 'angular-webstorage-service';
 import { QuestionComponent } from './question/question.component';
+import { ListComponent } from './list/list.component'; 
+import { BehaviorSubject} from 'rxjs/BehaviorSubject';
+import { LivePollComponent } from './live-poll/live-poll.component'; 
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import { QuestionComponent } from './question/question.component';
     ProfileComponent,
     CreatePollComponent,
     QuestionComponent,
+    ListComponent,
+    LivePollComponent,
   ],
   imports: [
     BrowserModule,

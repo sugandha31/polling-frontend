@@ -14,6 +14,7 @@ export class NodeService {
   private signupApi = "http://localhost:3000/api/signup";
   private logoutApi = "http://localhost:3000/api/logout"
   private getAll = "http://localhost:3000/api/getAllPolls";
+  private getDetailsApi = "http://localhost:3000/api/getDetails"
 
   constructor(private http: HttpClient) { }
 
@@ -37,5 +38,11 @@ export class NodeService {
 
   getAllPolls() : Observable <any>{
     return this.http.get(this.getAll);
+  }
+
+  getQuestionDetails(id:any) : Observable <any>{
+    return this.http.get(this.getDetailsApi,{
+      params: new HttpParams().set('id',id)
+    });
   }
 }
